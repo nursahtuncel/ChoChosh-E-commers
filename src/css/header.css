@@ -1,0 +1,20 @@
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logoText{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.input{
+ border:none;
+ border-bottom: 1px solid lightgray;
+ padding: 5px 10px;
+ outline: none;
+}
+.icon {
+  font-size: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
