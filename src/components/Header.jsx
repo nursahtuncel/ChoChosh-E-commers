@@ -4,8 +4,11 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Badge from '@mui/material/Badge';
 const Header = () => {
   const [theme, setTheme] = useState("light");
+  const navigate = useNavigate();
 
   const changeTheme = () => {
     const body = document.getElementById("root");
@@ -21,6 +24,7 @@ const Header = () => {
 
   return (
     <div
+
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -29,7 +33,7 @@ const Header = () => {
       }}
     >
       <div className="flex-row">
-        <p className="logoText">ChoChosh</p>
+        <p onClick={()=>navigate("/")} className="logoText">ChoChosh</p>
       </div>
       <div>
         {" "}
@@ -47,7 +51,11 @@ const Header = () => {
         ) : (
           <CiLight onClick={changeTheme} className="icon " />
         )}
-        <FaBasketShopping className="icon" />
+            <Badge badgeContent={4} color="error">
+  <FaBasketShopping className="icon" />
+
+    </Badge>
+     
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const ProductList = () => {
   const dispatch = useDispatch()
   // aşşağıda product'ı parantez içine aldık çünkü store'dan çektiğim products'ı object distructure ettik
   const { products } = useSelector((store) => store.products)
-  console.log("products", products)
+
 
 useEffect(() => {
   dispatch(getAllUsers())

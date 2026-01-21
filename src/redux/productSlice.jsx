@@ -16,7 +16,7 @@ const API_URL = 'https://fakestoreapi.com'
       return response.data
     
     } catch (error) {
-      return console.log('Something went wrong')
+      return error.message;
     } 
   }
 
